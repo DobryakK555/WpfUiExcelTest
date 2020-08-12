@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfUiExcelTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfUiExcelTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Border Padding="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="0.1*"></RowDefinition>
+                <RowDefinition Height="0.25*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="ChooseFile" Grid.Column="0" Grid.Row="1" 
+                Content="Choose file" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ChooseFile_Click"></Button>
+            <Label x:Name="FullFileName" Grid.Column="3" Grid.Row="1"
+               Content="" HorizontalContentAlignment="Left" Visibility="Hidden"></Label>
+            <Label x:Name="IsFileValid" Grid.Column="3" Grid.Row="1"
+               Content="" HorizontalContentAlignment="Center" Visibility="Hidden"></Label>
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="2" Margin="0 0 0 10">
+                <DatePicker x:Name="startPeriod"  Grid.Row="2" Grid.Column="2" Margin="0 0 10 0"></DatePicker>
+                <DatePicker x:Name="endPeriod" Grid.Row="2" Grid.Column="3" Margin="10 0 0 0"></DatePicker>
+            </StackPanel>
+            <Button x:Name="Calculate" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"
+                Content="Calculate" Click="Calculate_Click" ></Button>
+            <DataGrid x:Name="ExcelFile" Grid.ColumnSpan="5" Grid.Row="3" Grid.Column="0" ItemsSource="{Binding}">
+
+            </DataGrid>
+        </Grid>
+    </Border>
+    
+    
+</Window>
