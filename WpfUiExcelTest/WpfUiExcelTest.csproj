@@ -78,7 +78,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\CalculatedRate.cs" />
-    <Compile Include="ViewModels\ShipmentViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -88,7 +87,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ExcelService.cs" />
-    <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
